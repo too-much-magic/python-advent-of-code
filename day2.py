@@ -7,7 +7,8 @@ with open("day2.txt") as file:
             nums.append(int(num))
         increasing = nums[0] < nums[1]
         for n in range(len(nums) - 1):
-            if abs(nums[n] - nums[n + 1]) > 3 or abs(nums[n] - nums[n + 1]) < 1 or (nums[n] < nums[n + 1]) != increasing:
+            if abs(nums[n] - nums[n + 1]) > 3 or abs(nums[n] - nums[n + 1]) < 1 or (
+                    nums[n] < nums[n + 1]) != increasing:
                 break
         else:
             safe += 1

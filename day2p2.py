@@ -1,4 +1,6 @@
 safe = 0
+
+
 def verify(nums):
     increasing = nums[0] < nums[1]
     for i in range(len(nums) - 1):
@@ -6,6 +8,7 @@ def verify(nums):
                 nums[i] < nums[i + 1]) != increasing:
             return False
     return True
+
 
 with open("day2.txt") as file:
     for line in file:

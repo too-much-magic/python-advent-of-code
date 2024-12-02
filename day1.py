@@ -6,7 +6,7 @@ with open("day1.txt") as file:
         curr = line.split()
         list1.append(int(curr[0]))
         list2.append(int(curr[1]))
-    
+
 list1.sort()
 list2.sort()
 
