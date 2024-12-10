@@ -14,5 +14,5 @@ dist = 0
 
 for n in range(len(list1)):
     dist += abs(list1[n] - list2[n])
-    
+
 print(dist)

@@ -1,8 +1,9 @@
-with open("day4.txt", 'r') as file:    
+with open("day4.txt", 'r') as file:
     board = []
 
     for index1, line in enumerate(file):
         board.append(list(line.rstrip()))
+
 
     # board is [ROW][COL]
     def dfs(dr, dc, count=2, r=0, c=0, visited=None):

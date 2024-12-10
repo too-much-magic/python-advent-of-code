@@ -20,6 +20,7 @@ def verify_mul(segment, i):
                 return int(num1) * int(num2)
     return 0
 
+
 with open("day3.txt", 'r') as file:
     mult_sum = 0
     do = True
@@ -27,8 +28,8 @@ with open("day3.txt", 'r') as file:
         for n in range(len(line)):
             if do:
                 mult_sum += verify_mul(line, n)
-            if line[n:n+4] == "do()":
+            if line[n:n + 4] == "do()":
                 do = True
-            elif line[n:n+7] == "don't()":
+            elif line[n:n + 7] == "don't()":
                 do = False
     print(mult_sum)

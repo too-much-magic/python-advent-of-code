@@ -26,8 +26,6 @@ with open("day5.txt") as file:
     for rule in rules:
         rules_dict[rule[0]].add(rule[1])
 
-    invalids = []
-
     page_sum = 0
     for update in order:
         valid = True
@@ -38,17 +36,7 @@ with open("day5.txt") as file:
                     valid = False
                     break
             seen.add(page)
-        if not valid:
-            invalids.append(update)
-    
-    
-    for update in invalids:
-        valid = True
-        seen = set()
-        for index,page in enumerate(update):
-            for rule in seen:
-                if rule[0] in rules_dict[page]:
-                    update[index],update[rule[1]] = update[rule[1]],update[index]
-            seen.add((page,index))
-    
-    print(invalids)
+        if valid:
+            page_sum += update[len(update) // 2]
+
+    print(page_sum)

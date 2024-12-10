@@ -4,13 +4,12 @@ board = []
 with open("day8.txt") as file:
     for line in file:
         board.append(list(line.rstrip()))
-        
-        
+
 antennae = defaultdict(list)
 for r in range(len(board)):
     for c in range(len(board[0])):
         if board[r][c].isalnum():
-            antennae[board[r][c]].append((r,c))
+            antennae[board[r][c]].append((r, c))
 
 locations = set()
 for key in antennae:

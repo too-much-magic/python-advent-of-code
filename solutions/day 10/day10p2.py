@@ -39,7 +39,8 @@ for row in range(len(board)):
                 new_path.append((row + dr, row + dc))
                 paths_count += dfs(row + dr, col + dc, height + 1, new_path)
             return paths_count
-        
+
+
         current = dfs(row, col)
         total_ratings += current
 print(total_ratings)
